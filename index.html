@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>ICMAI Result</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f3f3}
+.box{width:760px;max-width:95%;margin:30px auto;background:#fff;border:1px solid #ccc;padding:30px;text-align:center}
+h2{font-size:30px;margin:5px 0} h3{font-weight:normal;margin:0} h4{font-size:24px}
+input{padding:8px;width:220px} button{padding:8px 18px;margin-left:15px}
+#resultImage{display:none;width:95%;margin:20px auto;border:1px solid #999}
+#printBtn{display:none;padding:6px 15px;margin:10px auto}
+</style>
+<script>
+function viewResult(){
+ let r=document.getElementById('rollNo').value.trim();
+ if(r==="407485"){
+  document.getElementById('searchPage').style.display='none';
+  document.getElementById('resultImage').style.display='block';
+  document.getElementById('printBtn').style.display='inline-block';
+ }else alert("Invalid Roll Number");
+}
+
+function printResult(){
+ window.print();
+}
+</script></head><body>
+<div class="box" id="searchPage">
+<h2>THE INSTITUTE OF COST ACCOUNTANTS OF INDIA</h2>
+<h3>(Statutory body under an Act of Parliament)</h3>
+<h4>Result for June 2026 Intermediate Examination</h4><br>
+<div>Roll No #</div><br>
+<input id="rollNo" type="text" placeholder="Enter Roll No.">
+<button onclick="viewResult()">View Result</button>
+<br><br><b>Instructions :</b>
+<p>For new registrations (after 2012) the Identification number format is (EF000000123,SF000000123,NF000000123)</p>
+</div>
+
+<img id="resultImage" src="1000096446.png">
+
+<br>
+<button id="printBtn" onclick="printResult()">Print</button>
+
+</body></html>
